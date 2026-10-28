@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kopi Senja – Coffee Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar" id="navbar">
+    <a href="#home" class="logo">Kopi Senja</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">&#9776;</button>
+    <nav id="navLinks">
+      <a href="#home">Beranda</a>
+      <a href="#about">Tentang</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+  </header>
+
+  <!-- 1. HOME / HERO -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Kopi Senja</h1>
+      <p>Kopi lokal yang diseduh pelan, disajikan hangat. Tempat singgah favorit setelah hari yang panjang.</p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn btn-primary">Lihat Menu</a>
+        <a href="#contact" class="btn btn-outline">Kunjungi Kami</a>
+      </div>
+    </div>
+    <div class="hero-cup" aria-hidden="true">
+      <div class="cup"><span class="steam s1"></span><span class="steam s2"></span><span class="steam s3"></span></div>
+      <div class="saucer"></div>
+    </div>
+  </section>
+
+  <!-- 2. ABOUT / PROFILE -->
+  <section id="about" class="section">
+    <h2>Tentang Kami</h2>
+    <div class="about-grid">
+      <div>
+        <p>Kopi Senja berdiri pada tahun 2020 dari satu mesin espresso bekas dan keinginan sederhana: menyajikan kopi petani lokal dengan harga yang ramah untuk mahasiswa dan pekerja.</p>
+        <p>Biji kopi kami datang langsung dari kebun di Jawa, Sumatra, dan Flores, lalu disangrai setiap pekan di dapur kecil di belakang kedai.</p>
+      </div>
+      <div class="about-cards">
+        <article>
+          <h3>Visi</h3>
+          <p>Menjadi kedai kopi yang dikenal karena rasa jujur dan suasana yang membuat orang betah.</p>
+        </article>
+        <article>
+          <h3>Misi</h3>
+          <ul>
+            <li>Membeli biji kopi langsung dari petani lokal</li>
+            <li>Menyajikan kopi segar tanpa bahan pengawet</li>
+            <li>Menyediakan ruang nyaman untuk belajar dan berkumpul</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. MAIN CONTENT: MENU -->
+  <section id="menu" class="section section-dark">
+    <h2>Menu Kami</h2>
+    <p class="section-note">Pilih kategori untuk memfilter menu.</p>
+
+    <div class="filters" role="group" aria-label="Filter kategori">
+      <button class="filter active" data-filter="all">Semua</button>
+      <button class="filter" data-filter="kopi">Kopi</button>
+      <button class="filter" data-filter="non-kopi">Non-Kopi</button>
+      <button class="filter" data-filter="makanan">Makanan</button>
+    </div>
+
+    <div class="menu-grid" id="menuGrid"></div>
+  </section>
+
+  <!-- 4. CONTACT & FOOTER -->
+  <section id="contact" class="section">
+    <h2>Hubungi Kami</h2>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <p><strong>Alamat</strong><br>Jl. Merdeka No. 12, Majenang, Cilacap</p>
+        <p><strong>Jam buka</strong><br>Senin–Jumat 08.00–22.00<br>Sabtu–Minggu 09.00–23.00</p>
+        <p><strong>Telepon / WhatsApp</strong><br>0812-3456-7890</p>
+        <p><strong>Email</strong><br>halo@kopisenja.id</p>
+      </div>
+
+      <form id="contactForm" novalidate>
+        <label for="name">Nama</label>
+        <input type="text" id="name" placeholder="Nama Anda">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="nama@email.com">
+
+        <label for="message">Pesan</label>
+        <textarea id="message" rows="4" placeholder="Tulis pesan atau pertanyaan Anda"></textarea>
+
+        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+        <p id="formStatus" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong>Kopi Senja</strong>
+        <p>Diseduh pelan, disajikan hangat.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Beranda</a>
+        <a href="#about">Tentang</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Kontak</a>
+      </div>
+      <div class="footer-links">
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://tiktok.com" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+    <p class="copyright">&copy; <span id="year"></span> Kopi Senja. Semua hak dilindungi.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
