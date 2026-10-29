@@ -27,7 +27,7 @@ Google Fonts: Bricolage Grotesque dan Figtree
 Git dan GitHub untuk version control dan kolaborasi
 
 Cara Menjalankan Secara Lokal
-1. Clone repository: git clone https://github.com/username-github/miniProjectCatalyst.git
+1. Clone repository: git clone https://github.com/f8ra/miniProjectCatalyst.git
 2. Download Extension Live Server (VS Code), klik kanan index.html, lalu pilih Open with Live Server
 
 Pembagian Tugas dan Kontribusi
