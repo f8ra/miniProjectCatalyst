@@ -32,7 +32,7 @@ Cara Menjalankan Secara Lokal
 
 Pembagian Tugas dan Kontribusi
 Pekerjaan dibagi per section. Setiap anggota mengerjakannya di branch sendiri, lalu digabung ke main lewat Pull Request.
-feature/home (Faeyza Al Barra Kamil)
-feature/about (Muhammad Haidar Ulinnuha)
-feature/menu (Mukhamad Khairul Ramadhan)
-feature/contact/footer (Fiqra M. Bhagasukma)
+- feature/home (Faeyza Al Barra Kamil)
+- feature/about (Muhammad Haidar Ulinnuha)
+- feature/menu (Mukhamad Khairul Ramadhan)
+- feature/contact/footer (Fiqra M. Bhagasukma)
