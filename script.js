@@ -71,28 +71,51 @@ sections.forEach(s => observer.observe(s));
 
 // ===== Validasi form kontak =====
 const form = document.getElementById("contactForm");
-const status = document.getElementById("formStatus");
+const formStatus = document.getElementById("formStatus");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
+
+function setInvalid(input, invalid) {
+  input.setAttribute("aria-invalid", invalid);
+}
 
 form.addEventListener("submit", e => {
   e.preventDefault();
-  const name = form.name.value.trim();
-  const email = form.email.value.trim();
-  const message = form.message.value.trim();
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+  const message = messageInput.value.trim();
   const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-  status.className = "";
+  setInvalid(nameInput, !name);
+  setInvalid(emailInput, !email || !emailOk);
+  setInvalid(messageInput, !message);
+
+  formStatus.className = "";
   if (!name || !email || !message) {
-    status.textContent = "Lengkapi nama, email, dan pesan terlebih dahulu.";
-    status.classList.add("error");
+    formStatus.textContent = "Lengkapi nama, email, dan pesan terlebih dahulu.";
+    formStatus.classList.add("error");
+    (!name ? nameInput : !email ? emailInput : messageInput).focus();
   } else if (!emailOk) {
-    status.textContent = "Format email belum benar. Contoh: nama@email.com";
-    status.classList.add("error");
+    formStatus.textContent = "Format email belum benar. Contoh: nama@email.com";
+    formStatus.classList.add("error");
+    emailInput.focus();
+  } else if (message.length < 10) {
+    setInvalid(messageInput, true);
+    formStatus.textContent = "Pesan terlalu pendek (minimal 10 karakter).";
+    formStatus.classList.add("error");
+    messageInput.focus();
   } else {
-    status.textContent = `Terima kasih, ${name}. Pesan Anda sudah kami terima.`;
-    status.classList.add("ok");
+    formStatus.textContent = `Terima kasih, ${name}. Pesan Anda sudah kami terima.`;
+    formStatus.classList.add("ok");
     form.reset();
   }
 });
+
+// Hapus tanda error saat pengguna mengetik ulang
+[nameInput, emailInput, messageInput].forEach(el =>
+  el.addEventListener("input", () => setInvalid(el, false))
+);
 
 // ===== Tahun otomatis di footer =====
 document.getElementById("year").textContent = new Date().getFullYear();
