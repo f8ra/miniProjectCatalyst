@@ -12,11 +12,6 @@ Anggota kelompok:
 Latar Belakang dan Tujuan
 Project ini dibuat sebagai mini project kelompok untuk berlatih membangun website statis dengan HTML, CSS, dan JavaScript, serta bekerja sama memakai Git dan GitHub (branch, issue, commit, dan pull request).
 
-Tujuan website:
-Memperkenalkan Kopi Tuku Desa, mulai dari cerita berdirinya (2020), asal biji kopi (Jawa, Sumatra, dan Flores), sampai visi dan misinya.
-Menampilkan menu kopi, non-kopi, dan makanan beserta harganya.
-Memudahkan pengunjung menemukan lokasi, jam buka, dan kontak kedai.
-
 Fitur dan Section
 - Navbar: Navigasi tetap di atas, menu hamburger di layar kecil, bayangan saat halaman digulir, dan link yang menyala sesuai section yang sedang dilihat
 - Beranda (Hero):	Judul, deskripsi singkat, tombol "Lihat Menu" dan "Kunjungi Kami", serta ilustrasi cangkir kopi dari CSS dengan animasi uap
