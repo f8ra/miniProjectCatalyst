@@ -167,8 +167,16 @@ sections.forEach((section) => observer.observe(section));
 
 // ===== Validasi form kontak =====
 const form = document.getElementById("contactForm");
-const status = document.getElementById("formStatus");
+const formStatus = document.getElementById("formStatus");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
 
+function setInvalid(input, invalid) {
+  input.setAttribute("aria-invalid", invalid);
+}
+
+<<<<<<< HEAD
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -193,9 +201,44 @@ form.addEventListener("submit", (event) => {
       `Terima kasih, ${name}. Pesan Anda sudah kami terima.`;
 
     status.classList.add("ok");
+=======
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  const name = nameInput.value.trim();
+  const email = emailInput.value.trim();
+  const message = messageInput.value.trim();
+  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  setInvalid(nameInput, !name);
+  setInvalid(emailInput, !email || !emailOk);
+  setInvalid(messageInput, !message);
+
+  formStatus.className = "";
+  if (!name || !email || !message) {
+    formStatus.textContent = "Lengkapi nama, email, dan pesan terlebih dahulu.";
+    formStatus.classList.add("error");
+    (!name ? nameInput : !email ? emailInput : messageInput).focus();
+  } else if (!emailOk) {
+    formStatus.textContent = "Format email belum benar. Contoh: nama@email.com";
+    formStatus.classList.add("error");
+    emailInput.focus();
+  } else if (message.length < 10) {
+    setInvalid(messageInput, true);
+    formStatus.textContent = "Pesan terlalu pendek (minimal 10 karakter).";
+    formStatus.classList.add("error");
+    messageInput.focus();
+  } else {
+    formStatus.textContent = `Terima kasih, ${name}. Pesan Anda sudah kami terima.`;
+    formStatus.classList.add("ok");
+>>>>>>> cf3cd70f8aac1ae3e661260a78d5c4f7ad45c753
     form.reset();
   }
 });
+
+// Hapus tanda error saat pengguna mengetik ulang
+[nameInput, emailInput, messageInput].forEach(el =>
+  el.addEventListener("input", () => setInvalid(el, false))
+);
 
 // ===== Tahun otomatis di footer =====
 document.getElementById("year").textContent =
