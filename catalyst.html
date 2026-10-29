@@ -78,11 +78,22 @@
     <p class="section-note">Pilih kategori untuk memfilter menu.</p>
 
     <div class="filters" role="group" aria-label="Filter kategori">
-      <button class="filter active" data-filter="all">Semua</button>
-      <button class="filter" data-filter="kopi">Kopi</button>
-      <button class="filter" data-filter="non-kopi">Non-Kopi</button>
-      <button class="filter" data-filter="makanan">Makanan</button>
-    </div>
+  <button class="filter active" data-filter="all" aria-pressed="true">
+    Semua
+  </button>
+
+  <button class="filter" data-filter="kopi" aria-pressed="false">
+    Kopi
+  </button>
+
+  <button class="filter" data-filter="non-kopi" aria-pressed="false">
+    Non-Kopi
+  </button>
+
+  <button class="filter" data-filter="makanan" aria-pressed="false">
+    Makanan
+  </button>
+</div>
 
     <div class="menu-grid" id="menuGrid"></div>
   </section>
