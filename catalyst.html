@@ -104,14 +104,14 @@
 
       <form id="contactForm" novalidate>
         <label for="name">Nama</label>
-        <input type="text" id="name" placeholder="Nama Anda">
+        <input type="text" id="name" name="name" autocomplete="name" placeholder="Nama Anda">
 
         <label for="email">Email</label>
-        <input type="email" id="email" placeholder="nama@email.com">
+        <input type="email" id="email" name="email" autocomplete="email" placeholder="nama@email.com">
 
         <label for="message">Pesan</label>
-        <textarea id="message" rows="4" placeholder="Tulis pesan atau pertanyaan Anda"></textarea>
-
+        <textarea id="message" name="message" rows="4" placeholder="Tulis pesan atau pertanyaan Anda"></textarea>
+        
         <button type="submit" class="btn btn-primary">Kirim Pesan</button>
         <p id="formStatus" role="status"></p>
       </form>
