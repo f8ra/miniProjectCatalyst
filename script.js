@@ -1,4 +1,3 @@
-```javascript
 // ===== Data menu =====
 const menuItems = [
   {
@@ -176,32 +175,6 @@ function setInvalid(input, invalid) {
   input.setAttribute("aria-invalid", invalid);
 }
 
-<<<<<<< HEAD
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  status.className = "";
-
-  if (!name || !email || !message) {
-    status.textContent =
-      "Lengkapi nama, email, dan pesan terlebih dahulu.";
-    status.classList.add("error");
-  } else if (!emailPattern.test(email)) {
-    status.textContent =
-      "Format email belum benar. Contoh: nama@email.com";
-    status.classList.add("error");
-  } else {
-    status.textContent =
-      `Terima kasih, ${name}. Pesan Anda sudah kami terima.`;
-
-    status.classList.add("ok");
-=======
 form.addEventListener("submit", e => {
   e.preventDefault();
   const name = nameInput.value.trim();
@@ -230,7 +203,6 @@ form.addEventListener("submit", e => {
   } else {
     formStatus.textContent = `Terima kasih, ${name}. Pesan Anda sudah kami terima.`;
     formStatus.classList.add("ok");
->>>>>>> cf3cd70f8aac1ae3e661260a78d5c4f7ad45c753
     form.reset();
   }
 });
@@ -243,4 +215,3 @@ form.addEventListener("submit", e => {
 // ===== Tahun otomatis di footer =====
 document.getElementById("year").textContent =
   new Date().getFullYear();
-```
