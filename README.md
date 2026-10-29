@@ -1,3 +1,8 @@
+<img width="1366" height="649" alt="SSWebHome" src="https://github.com/user-attachments/assets/2317a1cf-e656-43a3-8ac7-8e816d9e8078" />
+<img width="1366" height="650" alt="SSWebTentang" src="https://github.com/user-attachments/assets/dab83c57-552e-4bba-ad17-d664ff034ee1" />
+<img width="1366" height="648" alt="SSWebMenu" src="https://github.com/user-attachments/assets/294f05fb-16d6-4006-9be9-2d88e309a69c" /><img width="1366" height="650" alt="SSWebTentang" src="https://github.com/user-attachments/assets/129de5ca-5977-469d-acd0-e1f9a0e8d4fb" />
+<img width="1366" height="645" alt="SSWebKontak" src="https://github.com/user-attachments/assets/11b10cd5-8134-4c90-a6b1-b925099d5ad8" /><img width="1366" height="233" alt="SSWebFooter" src="https://github.com/user-attachments/assets/611f3cda-50c4-46e7-a18d-317750ce43e8" />
+
 # miniProjectCatalyst
 
 Kopi Tuku Desa
@@ -36,3 +41,4 @@ Pekerjaan dibagi per section. Setiap anggota mengerjakannya di branch sendiri, l
 - feature/about (Muhammad Haidar Ulinnuha)
 - feature/menu (Mukhamad Khairul Ramadhan)
 - feature/contact/footer (Fiqra M. Bhagasukma)
+<img width="1052" height="425" alt="DokumPembagianTugas" src="https://github.com/user-attachments/assets/15e6077d-029a-436f-ac41-07072d6ec4c1" />
